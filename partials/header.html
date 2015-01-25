@@ -10,11 +10,8 @@
                 <li>
                     <a href="catalog-right.html" title="">Catalog</a>
                     <ul>
-                        <li><a href="catalog-right.html">Right sidebar</a></li>
-                        <li><a href="catalog-left.html">Left sidebar</a></li>
-                        <li><a href="catalog.html">Without sidebar</a></li>
-                        <li><a href="product-detail.html">Product detail</a></li>
-                    </ul>
+                        <li ng-repeat="menu in menulocation"><a href="#{{menu}}">{{menu.slice(1)}}</a></li>
+                       </ul>
                 </li>
                 <li>
                     <a href="components.html" title="">Pages</a>

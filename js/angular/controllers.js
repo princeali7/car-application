@@ -5,8 +5,25 @@ artistControllers.controller('ListController', ['$scope', '$http', function($sco
     $scope.artists = data;
     $scope.artistOrder = 'name';
     $scope.location = "true";
+    $scope.menulocation = ['/list', '/about', '/contact', '/details'];
+
+
+
   });
 }]);
+
+artistControllers.controller('HeaderController', ['$scope', '$http', function ($scope, $http) {
+    $http.get('js/angular/data.json').success(function (data) {
+        $scope.artists = data;
+        $scope.artistOrder = 'name';
+        $scope.location = "true";
+        $scope.menulocation = ['/list', '/about', '/contact', '/details'];
+
+
+
+    });
+}]);
+
 
 artistControllers.controller('DetailsController', ['$scope', '$http','$routeParams', function($scope, $http, $routeParams) {
     $http.get('js/angular/data.json').success(function (data) {
