@@ -1,0 +1,16 @@
+﻿
+<h2>{{cars.make.id}}    </h2>   
+<p>{{cars.make.name}}</p>
+<p>{{cars.make.niceName}}</p>
+<div ng-repeat=" photo in carsphoto">
+    <div ng-repeat="pic in photo.photoSrcs">
+        <div ng-if="onlylargepic(pic)">
+            <p>
+                <img ng-src="{{media+pic}}" alt="{{photo.captionTranscript}}" />
+            
+            </p>
+        </div>
+    </div>
+</div>
+
+

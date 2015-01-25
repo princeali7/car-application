@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+</head>
+<body>
+    <div id="myid"></div>
+    <a href="#" id="styledata">content</a>
+    <script src="js/jquery.js"></script>
+    <script>    
+        $(document).ready(function (){
+            var make= "https://api.edmunds.com/api/vehicle/v2/honda/pilot/2014/styles?state=used&view=full&fmt=json&api_key=zwh9s2gtnwwkbcseq2fsrxvg";
+            /////////////////
+            $("#styledata").click(function(){
+                $.getJSON( make, {}).done(function( data ) {
+                
+                var ali = data;   
+                });
+                });
+
+</body>
+</html>

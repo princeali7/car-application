@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "make": {
+      "properties": {
+        "id": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "niceName": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "year": {
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "year": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "submodel": {
+      "properties": {
+        "body": {
+          "type": "string"
+        },
+        "modelName": {
+          "type": "string"
+        },
+        "niceName": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "UnknownObject": {
+      "properties": {
+        "make": {
+          "$ref": "#/definitions/make"
+        },
+        "model": {
+          "$ref": "#/definitions/make"
+        },
+        "id": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "year": {
+          "$ref": "#/definitions/year"
+        },
+        "submodel": {
+          "$ref": "#/definitions/submodel"
+        },
+        "trim": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/UnknownObject"
+    }
+  ],
+  "type": "object"
+}

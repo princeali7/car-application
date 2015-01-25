@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "UnknownObject": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "shortname": {
+          "type": "string"
+        },
+        "reknown": {
+          "type": "string"
+        },
+        "bio": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "items": {
+    "$ref": "#/definitions/UnknownObject"
+  },
+  "type": "array"
+}
